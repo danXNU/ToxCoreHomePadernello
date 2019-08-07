@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB11BC0B2117BFCD00F7CCDF /* CreateObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11BC0A2117BFCD00F7CCDF /* CreateObjectView.swift */; };
+		DB1D018E212CCAEE006B190E /* ToxObjectsVoiceControl.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DB1D0194212CCB43006B190E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0193212CCB43006B190E /* Intents.intentdefinition */; };
+		DB1D0195212CCB43006B190E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0193212CCB43006B190E /* Intents.intentdefinition */; };
+		DB1D0197212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0196212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift */; };
+		DB1D0198212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0196212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift */; };
+		DB1D0199212CD214006B190E /* ToxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EBB2111017200F850DC /* ToxContainer.swift */; };
+		DB1D019A212CD264006B190E /* ToxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE5210E8AAC00951F45 /* ToxObject.swift */; };
+		DB1D019B212CD380006B190E /* ToxSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE0210E422D00951F45 /* ToxSocket.swift */; };
+		DB1D019C212CD383006B190E /* ToxRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE2210E4D1C00951F45 /* ToxRequest.swift */; };
+		DB1D019D212CD38B006B190E /* ToxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE7210E8ACE00951F45 /* ToxResponse.swift */; };
+		DB1D019E212CD38E006B190E /* ToxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EAE210FC00700F850DC /* ToxError.swift */; };
+		DB1D019F212CD396006B190E /* ToxRequestsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EDD21122A3800F850DC /* ToxRequestsStructs.swift */; };
+		DB1D01A1212CD3BC006B190E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EB92110F8D700F850DC /* Extensions.swift */; };
+		DB1D01A2212CD4F7006B190E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0189212CCAEE006B190E /* IntentHandler.swift */; };
+		DB1D01A3212CD552006B190E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0189212CCAEE006B190E /* IntentHandler.swift */; };
+		DB1D01A5212CD56A006B190E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1D01A4212CD56A006B190E /* Intents.framework */; };
+		DB29CBC5210CD2C000951F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBC4210CD2C000951F45 /* AppDelegate.swift */; };
+		DB29CBCD210CD2C000951F45 /* ToxCoreHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBCB210CD2C000951F45 /* ToxCoreHome.xcdatamodeld */; };
+		DB29CBCF210CD2C200951F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB29CBCE210CD2C200951F45 /* Assets.xcassets */; };
+		DB29CBD2210CD2C200951F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB29CBD0210CD2C200951F45 /* LaunchScreen.storyboard */; };
+		DB29CBDB210CD43000951F45 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBDA210CD43000951F45 /* HomeVC.swift */; };
+		DB29CBDE210D06AA00951F45 /* CreateObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBDD210D06AA00951F45 /* CreateObjectVC.swift */; };
+		DB29CBE1210E422D00951F45 /* ToxSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE0210E422D00951F45 /* ToxSocket.swift */; };
+		DB29CBE3210E4D1C00951F45 /* ToxRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE2210E4D1C00951F45 /* ToxRequest.swift */; };
+		DB29CBE6210E8AAC00951F45 /* ToxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE5210E8AAC00951F45 /* ToxObject.swift */; };
+		DB29CBE8210E8ACE00951F45 /* ToxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29CBE7210E8ACE00951F45 /* ToxResponse.swift */; };
+		DB4AB59B213C3B7200E1AA21 /* ActionObjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AB59A213C3B7200E1AA21 /* ActionObjectsVC.swift */; };
+		DB4AB59D213C3BA800E1AA21 /* ActionObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AB59C213C3BA800E1AA21 /* ActionObjectsView.swift */; };
+		DB4AB59F213C8B6600E1AA21 /* AddObjectToListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AB59E213C8B6600E1AA21 /* AddObjectToListVC.swift */; };
+		DB4AB5A1213C8B9800E1AA21 /* AddObjectToListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AB5A0213C8B9800E1AA21 /* AddObjectToListView.swift */; };
+		DB4AB5A3213C8DE800E1AA21 /* ObjectMiniCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AB5A2213C8DE800E1AA21 /* ObjectMiniCell.swift */; };
+		DB780EAF210FC00700F850DC /* ToxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EAE210FC00700F850DC /* ToxError.swift */; };
+		DB780EB12110E08700F850DC /* SetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EB02110E08700F850DC /* SetupViews.swift */; };
+		DB780EB42110E24D00F850DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EB32110E24D00F850DC /* HomeView.swift */; };
+		DB780EB72110F4E300F850DC /* ToxObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EB62110F4E300F850DC /* ToxObjectCell.swift */; };
+		DB780EBA2110F8D700F850DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EB92110F8D700F850DC /* Extensions.swift */; };
+		DB780EBC2111017200F850DC /* ToxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EBB2111017200F850DC /* ToxContainer.swift */; };
+		DB780EDE21122A3800F850DC /* ToxRequestsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EDD21122A3800F850DC /* ToxRequestsStructs.swift */; };
+		DB780EE221127E7800F850DC /* EditObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EE121127E7800F850DC /* EditObjectVC.swift */; };
+		DB780EE421127EF400F850DC /* EditObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EE321127EF400F850DC /* EditObjectView.swift */; };
+		DB780EE621138DA800F850DC /* ToxHandlerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EE521138DA800F850DC /* ToxHandlerCell.swift */; };
+		DB780EEC2113B18300F850DC /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EEA2113B18300F850DC /* DropDownButton.swift */; };
+		DB780EED2113B18300F850DC /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EEB2113B18300F850DC /* DropDownView.swift */; };
+		DB780EEF2114AA9500F850DC /* AddHandlerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EEE2114AA9500F850DC /* AddHandlerVC.swift */; };
+		DB780EF12114AABB00F850DC /* AddHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780EF02114AABB00F850DC /* AddHandlerView.swift */; };
+		DB9F2F652124E54A0005BB65 /* ChangeObjectPropertiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F2F642124E54A0005BB65 /* ChangeObjectPropertiesVC.swift */; };
+		DB9F2F672124E56D0005BB65 /* ChangeObjectPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F2F662124E56D0005BB65 /* ChangeObjectPropertiesView.swift */; };
+		DB9F2F692124EBBA0005BB65 /* ObjectPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F2F682124EBBA0005BB65 /* ObjectPropertyCell.swift */; };
+		DBE12F532138946500E054FF /* ToxCoreHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE12F522138946500E054FF /* ToxCoreHomeTests.swift */; };
+		DBEC57DD2152B20900B8CA9D /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC57DC2152B20900B8CA9D /* ListButton.swift */; };
+		DBED3418213DB64000670DF1 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1581EC2128EC3300589EC5 /* Socket.framework */; };
+		DBED341E213F28FF00670DF1 /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED341D213F28FF00670DF1 /* SiriVC.swift */; };
+		DBED3420213F291600670DF1 /* SiriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED341F213F291600670DF1 /* SiriView.swift */; };
+		DBED3422213FFDA300670DF1 /* LiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED3421213FFDA300670DF1 /* LiveVC.swift */; };
+		DBED3424213FFDB800670DF1 /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED3423213FFDB800670DF1 /* LiveView.swift */; };
+		DBF6257921414AF500BE5A18 /* LiveObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6257821414AF500BE5A18 /* LiveObjectCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB1D018C212CCAEE006B190E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB29CBB9210CD2C000951F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB1D0186212CCAEE006B190E;
+			remoteInfo = ToxObjectsVoiceControl;
+		};
+		DBE12F552138946500E054FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB29CBB9210CD2C000951F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB29CBC0210CD2C000951F45;
+			remoteInfo = ToxCoreHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB1D0192212CCAEE006B190E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB1D018E212CCAEE006B190E /* ToxObjectsVoiceControl.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB11BC0A2117BFCD00F7CCDF /* CreateObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateObjectView.swift; sourceTree = "<group>"; };
+		DB1581EC2128EC3300589EC5 /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
+		DB1D0182212CC9BA006B190E /* ToxCoreHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToxCoreHome.entitlements; sourceTree = "<group>"; };
+		DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToxObjectsVoiceControl.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1D0189212CCAEE006B190E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		DB1D018B212CCAEE006B190E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB1D0193212CCB43006B190E /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		DB1D0196212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteObjectMessageIntentHandler.swift; sourceTree = "<group>"; };
+		DB1D01A4212CD56A006B190E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		DB1D01A6212CE346006B190E /* ToxObjectsVoiceControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToxObjectsVoiceControl.entitlements; sourceTree = "<group>"; };
+		DB29CBC1210CD2C000951F45 /* ToxCoreHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToxCoreHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB29CBC4210CD2C000951F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB29CBCC210CD2C000951F45 /* ToxCoreHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToxCoreHome.xcdatamodel; sourceTree = "<group>"; };
+		DB29CBCE210CD2C200951F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB29CBD1210CD2C200951F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB29CBD3210CD2C200951F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB29CBDA210CD43000951F45 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DB29CBDD210D06AA00951F45 /* CreateObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateObjectVC.swift; sourceTree = "<group>"; };
+		DB29CBE0210E422D00951F45 /* ToxSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxSocket.swift; sourceTree = "<group>"; };
+		DB29CBE2210E4D1C00951F45 /* ToxRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxRequest.swift; sourceTree = "<group>"; };
+		DB29CBE5210E8AAC00951F45 /* ToxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxObject.swift; sourceTree = "<group>"; };
+		DB29CBE7210E8ACE00951F45 /* ToxResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxResponse.swift; sourceTree = "<group>"; };
+		DB4AB59A213C3B7200E1AA21 /* ActionObjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionObjectsVC.swift; sourceTree = "<group>"; };
+		DB4AB59C213C3BA800E1AA21 /* ActionObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionObjectsView.swift; sourceTree = "<group>"; };
+		DB4AB59E213C8B6600E1AA21 /* AddObjectToListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectToListVC.swift; sourceTree = "<group>"; };
+		DB4AB5A0213C8B9800E1AA21 /* AddObjectToListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectToListView.swift; sourceTree = "<group>"; };
+		DB4AB5A2213C8DE800E1AA21 /* ObjectMiniCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMiniCell.swift; sourceTree = "<group>"; };
+		DB780EAE210FC00700F850DC /* ToxError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxError.swift; sourceTree = "<group>"; };
+		DB780EB02110E08700F850DC /* SetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViews.swift; sourceTree = "<group>"; };
+		DB780EB32110E24D00F850DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB780EB62110F4E300F850DC /* ToxObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxObjectCell.swift; sourceTree = "<group>"; };
+		DB780EB92110F8D700F850DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DB780EBB2111017200F850DC /* ToxContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxContainer.swift; sourceTree = "<group>"; };
+		DB780EDD21122A3800F850DC /* ToxRequestsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxRequestsStructs.swift; sourceTree = "<group>"; };
+		DB780EE121127E7800F850DC /* EditObjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditObjectVC.swift; sourceTree = "<group>"; };
+		DB780EE321127EF400F850DC /* EditObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditObjectView.swift; sourceTree = "<group>"; };
+		DB780EE521138DA800F850DC /* ToxHandlerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxHandlerCell.swift; sourceTree = "<group>"; };
+		DB780EEA2113B18300F850DC /* DropDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		DB780EEB2113B18300F850DC /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		DB780EEE2114AA9500F850DC /* AddHandlerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerVC.swift; sourceTree = "<group>"; };
+		DB780EF02114AABB00F850DC /* AddHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHandlerView.swift; sourceTree = "<group>"; };
+		DB9F2F642124E54A0005BB65 /* ChangeObjectPropertiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeObjectPropertiesVC.swift; sourceTree = "<group>"; };
+		DB9F2F662124E56D0005BB65 /* ChangeObjectPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeObjectPropertiesView.swift; sourceTree = "<group>"; };
+		DB9F2F682124EBBA0005BB65 /* ObjectPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertyCell.swift; sourceTree = "<group>"; };
+		DBE12F502138946400E054FF /* ToxCoreHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxCoreHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE12F522138946500E054FF /* ToxCoreHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxCoreHomeTests.swift; sourceTree = "<group>"; };
+		DBE12F542138946500E054FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBEC57DC2152B20900B8CA9D /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
+		DBED341D213F28FF00670DF1 /* SiriVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriVC.swift; sourceTree = "<group>"; };
+		DBED341F213F291600670DF1 /* SiriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriView.swift; sourceTree = "<group>"; };
+		DBED3421213FFDA300670DF1 /* LiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVC.swift; sourceTree = "<group>"; };
+		DBED3423213FFDB800670DF1 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
+		DBF6257821414AF500BE5A18 /* LiveObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveObjectCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB1D0184212CCAEE006B190E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1D01A5212CD56A006B190E /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB29CBBE210CD2C000951F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBED3418213DB64000670DF1 /* Socket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE12F4D2138946400E054FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB1581EB2128EC3300589EC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D01A4212CD56A006B190E /* Intents.framework */,
+				DB1581EC2128EC3300589EC5 /* Socket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB1D0188212CCAEE006B190E /* ToxObjectsVoiceControl */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D01A6212CE346006B190E /* ToxObjectsVoiceControl.entitlements */,
+				DB1D0189212CCAEE006B190E /* IntentHandler.swift */,
+				DB1D018B212CCAEE006B190E /* Info.plist */,
+				DB1D0196212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift */,
+			);
+			path = ToxObjectsVoiceControl;
+			sourceTree = "<group>";
+		};
+		DB29CBB8210CD2C000951F45 = {
+			isa = PBXGroup;
+			children = (
+				DB29CBC3210CD2C000951F45 /* ToxCoreHome */,
+				DB1D0188212CCAEE006B190E /* ToxObjectsVoiceControl */,
+				DBE12F512138946500E054FF /* ToxCoreHomeTests */,
+				DB29CBC2210CD2C000951F45 /* Products */,
+				DB1581EB2128EC3300589EC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB29CBC2210CD2C000951F45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB29CBC1210CD2C000951F45 /* ToxCoreHome.app */,
+				DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */,
+				DBE12F502138946400E054FF /* ToxCoreHomeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB29CBC3210CD2C000951F45 /* ToxCoreHome */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D0193212CCB43006B190E /* Intents.intentdefinition */,
+				DB1D0182212CC9BA006B190E /* ToxCoreHome.entitlements */,
+				DB29CBC4210CD2C000951F45 /* AppDelegate.swift */,
+				DB29CBDF210E3F7700951F45 /* Model */,
+				DB780EB22110E1D400F850DC /* View */,
+				DB29CBDC210CD43900951F45 /* ViewControllers */,
+				DB780EB82110F87D00F850DC /* Extension */,
+				DB29CBD9210CD2FD00951F45 /* Supporting Files */,
+			);
+			path = ToxCoreHome;
+			sourceTree = "<group>";
+		};
+		DB29CBD9210CD2FD00951F45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB29CBCB210CD2C000951F45 /* ToxCoreHome.xcdatamodeld */,
+				DB29CBCE210CD2C200951F45 /* Assets.xcassets */,
+				DB29CBD0210CD2C200951F45 /* LaunchScreen.storyboard */,
+				DB29CBD3210CD2C200951F45 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB29CBDC210CD43900951F45 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB29CBDA210CD43000951F45 /* HomeVC.swift */,
+				DB29CBDD210D06AA00951F45 /* CreateObjectVC.swift */,
+				DB780EE121127E7800F850DC /* EditObjectVC.swift */,
+				DB780EEE2114AA9500F850DC /* AddHandlerVC.swift */,
+				DB9F2F642124E54A0005BB65 /* ChangeObjectPropertiesVC.swift */,
+				DB4AB59A213C3B7200E1AA21 /* ActionObjectsVC.swift */,
+				DB4AB59E213C8B6600E1AA21 /* AddObjectToListVC.swift */,
+				DBED341D213F28FF00670DF1 /* SiriVC.swift */,
+				DBED3421213FFDA300670DF1 /* LiveVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DB29CBDF210E3F7700951F45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB29CBE0210E422D00951F45 /* ToxSocket.swift */,
+				DB29CBE2210E4D1C00951F45 /* ToxRequest.swift */,
+				DB29CBE5210E8AAC00951F45 /* ToxObject.swift */,
+				DB29CBE7210E8ACE00951F45 /* ToxResponse.swift */,
+				DB780EAE210FC00700F850DC /* ToxError.swift */,
+				DB780EBB2111017200F850DC /* ToxContainer.swift */,
+				DB780EDD21122A3800F850DC /* ToxRequestsStructs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB780EB22110E1D400F850DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC57DB2152B1DF00B8CA9D /* DropDownActionButton */,
+				DB780EE92113B18300F850DC /* DropDownButton */,
+				DB780EB52110F4C400F850DC /* Cells */,
+				DB780EB02110E08700F850DC /* SetupViews.swift */,
+				DB780EB32110E24D00F850DC /* HomeView.swift */,
+				DB780EE321127EF400F850DC /* EditObjectView.swift */,
+				DB780EF02114AABB00F850DC /* AddHandlerView.swift */,
+				DB11BC0A2117BFCD00F7CCDF /* CreateObjectView.swift */,
+				DB9F2F662124E56D0005BB65 /* ChangeObjectPropertiesView.swift */,
+				DB4AB59C213C3BA800E1AA21 /* ActionObjectsView.swift */,
+				DB4AB5A0213C8B9800E1AA21 /* AddObjectToListView.swift */,
+				DBED341F213F291600670DF1 /* SiriView.swift */,
+				DBED3423213FFDB800670DF1 /* LiveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB780EB52110F4C400F850DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB780EB62110F4E300F850DC /* ToxObjectCell.swift */,
+				DB780EE521138DA800F850DC /* ToxHandlerCell.swift */,
+				DB9F2F682124EBBA0005BB65 /* ObjectPropertyCell.swift */,
+				DB4AB5A2213C8DE800E1AA21 /* ObjectMiniCell.swift */,
+				DBF6257821414AF500BE5A18 /* LiveObjectCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DB780EB82110F87D00F850DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB780EB92110F8D700F850DC /* Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB780EE92113B18300F850DC /* DropDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				DB780EEA2113B18300F850DC /* DropDownButton.swift */,
+				DB780EEB2113B18300F850DC /* DropDownView.swift */,
+			);
+			path = DropDownButton;
+			sourceTree = "<group>";
+		};
+		DBE12F512138946500E054FF /* ToxCoreHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBE12F522138946500E054FF /* ToxCoreHomeTests.swift */,
+				DBE12F542138946500E054FF /* Info.plist */,
+			);
+			path = ToxCoreHomeTests;
+			sourceTree = "<group>";
+		};
+		DBEC57DB2152B1DF00B8CA9D /* DropDownActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC57DC2152B20900B8CA9D /* ListButton.swift */,
+			);
+			path = DropDownActionButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB1D0186212CCAEE006B190E /* ToxObjectsVoiceControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB1D018F212CCAEE006B190E /* Build configuration list for PBXNativeTarget "ToxObjectsVoiceControl" */;
+			buildPhases = (
+				DB1D0183212CCAEE006B190E /* Sources */,
+				DB1D0184212CCAEE006B190E /* Frameworks */,
+				DB1D0185212CCAEE006B190E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToxObjectsVoiceControl;
+			productName = ToxObjectsVoiceControl;
+			productReference = DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DB29CBC0210CD2C000951F45 /* ToxCoreHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB29CBD6210CD2C200951F45 /* Build configuration list for PBXNativeTarget "ToxCoreHome" */;
+			buildPhases = (
+				DB29CBBD210CD2C000951F45 /* Sources */,
+				DB29CBBE210CD2C000951F45 /* Frameworks */,
+				DB29CBBF210CD2C000951F45 /* Resources */,
+				DB1581EE2128EC4A00589EC5 /* ShellScript */,
+				DB1D0192212CCAEE006B190E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB1D018D212CCAEE006B190E /* PBXTargetDependency */,
+			);
+			name = ToxCoreHome;
+			productName = ToxCoreHome;
+			productReference = DB29CBC1210CD2C000951F45 /* ToxCoreHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBE12F4F2138946400E054FF /* ToxCoreHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE12F592138946500E054FF /* Build configuration list for PBXNativeTarget "ToxCoreHomeTests" */;
+			buildPhases = (
+				DBE12F4C2138946400E054FF /* Sources */,
+				DBE12F4D2138946400E054FF /* Frameworks */,
+				DBE12F4E2138946400E054FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBE12F562138946500E054FF /* PBXTargetDependency */,
+			);
+			name = ToxCoreHomeTests;
+			productName = ToxCoreHomeTests;
+			productReference = DBE12F502138946400E054FF /* ToxCoreHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB29CBB9210CD2C000951F45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Dani Tox";
+				TargetAttributes = {
+					DB1D0186212CCAEE006B190E = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DB29CBC0210CD2C000951F45 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					DBE12F4F2138946400E054FF = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = DB29CBC0210CD2C000951F45;
+					};
+				};
+			};
+			buildConfigurationList = DB29CBBC210CD2C000951F45 /* Build configuration list for PBXProject "ToxCoreHome" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB29CBB8210CD2C000951F45;
+			productRefGroup = DB29CBC2210CD2C000951F45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB29CBC0210CD2C000951F45 /* ToxCoreHome */,
+				DB1D0186212CCAEE006B190E /* ToxObjectsVoiceControl */,
+				DBE12F4F2138946400E054FF /* ToxCoreHomeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB1D0185212CCAEE006B190E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB29CBBF210CD2C000951F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB29CBD2210CD2C200951F45 /* LaunchScreen.storyboard in Resources */,
+				DB29CBCF210CD2C200951F45 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE12F4E2138946400E054FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB1581EE2128EC4A00589EC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Socket.framework",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Socket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB1D0183212CCAEE006B190E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1D019B212CD380006B190E /* ToxSocket.swift in Sources */,
+				DB1D0195212CCB43006B190E /* Intents.intentdefinition in Sources */,
+				DB1D019F212CD396006B190E /* ToxRequestsStructs.swift in Sources */,
+				DB1D019A212CD264006B190E /* ToxObject.swift in Sources */,
+				DB1D019C212CD383006B190E /* ToxRequest.swift in Sources */,
+				DB1D0198212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift in Sources */,
+				DB1D019E212CD38E006B190E /* ToxError.swift in Sources */,
+				DB1D019D212CD38B006B190E /* ToxResponse.swift in Sources */,
+				DB1D01A1212CD3BC006B190E /* Extensions.swift in Sources */,
+				DB1D01A3212CD552006B190E /* IntentHandler.swift in Sources */,
+				DB1D0199212CD214006B190E /* ToxContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB29CBBD210CD2C000951F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB780EE221127E7800F850DC /* EditObjectVC.swift in Sources */,
+				DB780EE621138DA800F850DC /* ToxHandlerCell.swift in Sources */,
+				DB780EB72110F4E300F850DC /* ToxObjectCell.swift in Sources */,
+				DB1D0194212CCB43006B190E /* Intents.intentdefinition in Sources */,
+				DB29CBDB210CD43000951F45 /* HomeVC.swift in Sources */,
+				DB9F2F652124E54A0005BB65 /* ChangeObjectPropertiesVC.swift in Sources */,
+				DB4AB5A1213C8B9800E1AA21 /* AddObjectToListView.swift in Sources */,
+				DB780EE421127EF400F850DC /* EditObjectView.swift in Sources */,
+				DB29CBE1210E422D00951F45 /* ToxSocket.swift in Sources */,
+				DB780EB12110E08700F850DC /* SetupViews.swift in Sources */,
+				DB4AB59B213C3B7200E1AA21 /* ActionObjectsVC.swift in Sources */,
+				DB4AB59F213C8B6600E1AA21 /* AddObjectToListVC.swift in Sources */,
+				DB1D0197212CCEDF006B190E /* ExecuteObjectMessageIntentHandler.swift in Sources */,
+				DB1D01A2212CD4F7006B190E /* IntentHandler.swift in Sources */,
+				DB4AB59D213C3BA800E1AA21 /* ActionObjectsView.swift in Sources */,
+				DB29CBCD210CD2C000951F45 /* ToxCoreHome.xcdatamodeld in Sources */,
+				DB780EDE21122A3800F850DC /* ToxRequestsStructs.swift in Sources */,
+				DB4AB5A3213C8DE800E1AA21 /* ObjectMiniCell.swift in Sources */,
+				DBF6257921414AF500BE5A18 /* LiveObjectCell.swift in Sources */,
+				DBED3424213FFDB800670DF1 /* LiveView.swift in Sources */,
+				DBED341E213F28FF00670DF1 /* SiriVC.swift in Sources */,
+				DB29CBC5210CD2C000951F45 /* AppDelegate.swift in Sources */,
+				DB11BC0B2117BFCD00F7CCDF /* CreateObjectView.swift in Sources */,
+				DB780EB42110E24D00F850DC /* HomeView.swift in Sources */,
+				DB9F2F692124EBBA0005BB65 /* ObjectPropertyCell.swift in Sources */,
+				DB780EEC2113B18300F850DC /* DropDownButton.swift in Sources */,
+				DBED3422213FFDA300670DF1 /* LiveVC.swift in Sources */,
+				DBEC57DD2152B20900B8CA9D /* ListButton.swift in Sources */,
+				DB780EEF2114AA9500F850DC /* AddHandlerVC.swift in Sources */,
+				DB29CBDE210D06AA00951F45 /* CreateObjectVC.swift in Sources */,
+				DB780EBA2110F8D700F850DC /* Extensions.swift in Sources */,
+				DB9F2F672124E56D0005BB65 /* ChangeObjectPropertiesView.swift in Sources */,
+				DB780EBC2111017200F850DC /* ToxContainer.swift in Sources */,
+				DB29CBE6210E8AAC00951F45 /* ToxObject.swift in Sources */,
+				DB780EF12114AABB00F850DC /* AddHandlerView.swift in Sources */,
+				DB780EED2113B18300F850DC /* DropDownView.swift in Sources */,
+				DB780EAF210FC00700F850DC /* ToxError.swift in Sources */,
+				DB29CBE8210E8ACE00951F45 /* ToxResponse.swift in Sources */,
+				DB29CBE3210E4D1C00951F45 /* ToxRequest.swift in Sources */,
+				DBED3420213F291600670DF1 /* SiriView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE12F4C2138946400E054FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE12F532138946500E054FF /* ToxCoreHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB1D018D212CCAEE006B190E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB1D0186212CCAEE006B190E /* ToxObjectsVoiceControl */;
+			targetProxy = DB1D018C212CCAEE006B190E /* PBXContainerItemProxy */;
+		};
+		DBE12F562138946500E054FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB29CBC0210CD2C000951F45 /* ToxCoreHome */;
+			targetProxy = DBE12F552138946500E054FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB29CBD0210CD2C200951F45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB29CBD1210CD2C200951F45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB1D0190212CCAEE006B190E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ToxObjectsVoiceControl/ToxObjectsVoiceControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ToxObjectsVoiceControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2.ToxObjectsVoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB1D0191212CCAEE006B190E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ToxObjectsVoiceControl/ToxObjectsVoiceControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ToxObjectsVoiceControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2.ToxObjectsVoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB29CBD4210CD2C200951F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB29CBD5210CD2C200951F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB29CBD7210CD2C200951F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ToxCoreHome/ToxCoreHome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ToxCoreHome/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB29CBD8210CD2C200951F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ToxCoreHome/ToxCoreHome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ToxCoreHome/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBE12F572138946500E054FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				INFOPLIST_FILE = ToxCoreHomeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToxCoreHome.app/ToxCoreHome";
+			};
+			name = Debug;
+		};
+		DBE12F582138946500E054FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				INFOPLIST_FILE = ToxCoreHomeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToxCoreHome.app/ToxCoreHome";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB1D018F212CCAEE006B190E /* Build configuration list for PBXNativeTarget "ToxObjectsVoiceControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB1D0190212CCAEE006B190E /* Debug */,
+				DB1D0191212CCAEE006B190E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB29CBBC210CD2C000951F45 /* Build configuration list for PBXProject "ToxCoreHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB29CBD4210CD2C200951F45 /* Debug */,
+				DB29CBD5210CD2C200951F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB29CBD6210CD2C200951F45 /* Build configuration list for PBXNativeTarget "ToxCoreHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB29CBD7210CD2C200951F45 /* Debug */,
+				DB29CBD8210CD2C200951F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE12F592138946500E054FF /* Build configuration list for PBXNativeTarget "ToxCoreHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE12F572138946500E054FF /* Debug */,
+				DBE12F582138946500E054FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB29CBCB210CD2C000951F45 /* ToxCoreHome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB29CBCC210CD2C000951F45 /* ToxCoreHome.xcdatamodel */,
+			);
+			currentVersion = DB29CBCC210CD2C000951F45 /* ToxCoreHome.xcdatamodel */;
+			path = ToxCoreHome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DB29CBB9210CD2C000951F45 /* Project object */;
+}
