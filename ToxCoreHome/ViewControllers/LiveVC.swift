@@ -30,7 +30,12 @@ class LiveVC: UIViewController, HasCustomView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rootView.backgroundColor = UIColor.white.darker(by: 7)
+        if #available(iOS 13, *) {
+            rootView.backgroundColor = .systemBackground
+        } else {
+            rootView.backgroundColor = UIColor.white.darker(by: 7)
+        }
+        
         rootView.tableView.delegate = self
         rootView.tableView.dataSource = self
         rootView.tableView.register(LiveObjectCell.self, forCellReuseIdentifier: "cell")
