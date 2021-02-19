@@ -5,6 +5,12 @@
 	<key>INEnums</key>
 	<array>
 		<dict>
+			<key>INEnumDisplayName</key>
+			<string>State</string>
+			<key>INEnumDisplayNameID</key>
+			<string>TNgxvV</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
 			<key>INEnumName</key>
 			<string>State</string>
 			<key>INEnumType</key>
@@ -16,8 +22,6 @@
 					<string>unknown</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>vOEuB9</string>
-					<key>INEnumValueIndex</key>
-					<integer>0</integer>
 					<key>INEnumValueName</key>
 					<string>unknown</string>
 				</dict>
@@ -45,13 +49,15 @@
 		</dict>
 	</array>
 	<key>INIntentDefinitionModelVersion</key>
-	<string>1.0</string>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>4XYDh1</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>18A371a</string>
+	<string>20D74</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>10L232m</string>
+	<string>12D4e</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>10.0</string>
+	<string>12.4</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -69,12 +75,6 @@
 			<dict>
 				<key>message,objectID,objectName</key>
 				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<false/>
-					<key>INIntentParameterCombinationSubtitle</key>
-					<string></string>
-					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>LiFlNB</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
@@ -88,10 +88,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataMaximumValue</key>
+						<integer>1</integer>
+						<key>INIntentParameterMetadataType</key>
+						<string>Field</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>objectID</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>4</integer>
 					<key>INIntentParameterType</key>
@@ -100,10 +105,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>2rzec9</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>message</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>
 					<key>INIntentParameterType</key>
@@ -112,10 +122,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>3</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>w9jjQw</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>objectName</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>5</integer>
 					<key>INIntentParameterType</key>
@@ -128,16 +143,6 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>Qualcosa con il server è andato storto</string>
-						<key>INIntentResponseCodeFormatStringID</key>
-						<string>5133ba</string>
-						<key>INIntentResponseCodeName</key>
-						<string>failure</string>
-						<key>INIntentResponseCodeSuccess</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>INIntentResponseCodeFormatString</key>
 						<string>Azione esguita con successo!</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>IJH6Mm</string>
@@ -148,13 +153,19 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
+						<string>Qualcosa con il server è andato storto</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>5133ba</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
 						<string>Non riesco a connettermi con il server Tox</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>NEdCZs</string>
 						<key>INIntentResponseCodeName</key>
 						<string>failureNoConnection</string>
-						<key>INIntentResponseCodeSuccess</key>
-						<false/>
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
@@ -166,10 +177,10 @@
 						<integer>1</integer>
 						<key>INIntentResponseParameterEnumType</key>
 						<string>State</string>
+						<key>INIntentResponseParameterEnumTypeNamespace</key>
+						<string>4XYDh1</string>
 						<key>INIntentResponseParameterName</key>
 						<string>property</string>
-						<key>INIntentResponseParameterSupportsMultipleValues</key>
-						<false/>
 						<key>INIntentResponseParameterTag</key>
 						<integer>1</integer>
 						<key>INIntentResponseParameterType</key>
@@ -177,19 +188,17 @@
 					</dict>
 				</array>
 			</dict>
-			<key>INIntentRestrictions</key>
-			<integer>0</integer>
 			<key>INIntentTitle</key>
 			<string>Esegui un'azione</string>
 			<key>INIntentTitleID</key>
 			<string>wrRQ61</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
-			<key>INIntentUserConfirmationRequired</key>
-			<false/>
 			<key>INIntentVerb</key>
 			<string>Do</string>
 		</dict>
 	</array>
+	<key>INTypes</key>
+	<array/>
 </dict>
 </plist>

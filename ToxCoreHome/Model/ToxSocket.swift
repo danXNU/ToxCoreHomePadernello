@@ -59,7 +59,7 @@ class ToxSocket<RequestType: Codable, ReturnType: Codable> {
                 return
             }
             
-            guard let requestData = request.data else {
+            guard request.data != nil else {
                 completionHandler(nil, ToxError.inconsistencyLocalError(msg: "requestData == nil"))
                 return
             }
