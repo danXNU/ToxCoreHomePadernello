@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.toxHome.app</string>
+		<string>group.danxnu.corehome</string>
 	</array>
 </dict>
 </plist>

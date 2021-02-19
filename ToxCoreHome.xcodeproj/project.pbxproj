@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BA21D325DFDFA9003AAF8E /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 44BA21D225DFDFA9003AAF8E /* Socket */; };
 		DB11BC0B2117BFCD00F7CCDF /* CreateObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11BC0A2117BFCD00F7CCDF /* CreateObjectView.swift */; };
 		DB1D018E212CCAEE006B190E /* ToxObjectsVoiceControl.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB1D0194212CCB43006B190E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DB1D0193212CCB43006B190E /* Intents.intentdefinition */; };
@@ -58,7 +59,6 @@
 		DB9F2F692124EBBA0005BB65 /* ObjectPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F2F682124EBBA0005BB65 /* ObjectPropertyCell.swift */; };
 		DBE12F532138946500E054FF /* ToxCoreHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE12F522138946500E054FF /* ToxCoreHomeTests.swift */; };
 		DBEC57DD2152B20900B8CA9D /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC57DC2152B20900B8CA9D /* ListButton.swift */; };
-		DBED3418213DB64000670DF1 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1581EC2128EC3300589EC5 /* Socket.framework */; };
 		DBED341E213F28FF00670DF1 /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED341D213F28FF00670DF1 /* SiriVC.swift */; };
 		DBED3420213F291600670DF1 /* SiriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED341F213F291600670DF1 /* SiriView.swift */; };
 		DBED3422213FFDA300670DF1 /* LiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED3421213FFDA300670DF1 /* LiveVC.swift */; };
@@ -99,7 +99,6 @@
 
 /* Begin PBXFileReference section */
 		DB11BC0A2117BFCD00F7CCDF /* CreateObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateObjectView.swift; sourceTree = "<group>"; };
-		DB1581EC2128EC3300589EC5 /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
 		DB1D0182212CC9BA006B190E /* ToxCoreHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToxCoreHome.entitlements; sourceTree = "<group>"; };
 		DB1D0187212CCAEE006B190E /* ToxObjectsVoiceControl.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToxObjectsVoiceControl.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1D0189212CCAEE006B190E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -166,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBED3418213DB64000670DF1 /* Socket.framework in Frameworks */,
+				44BA21D325DFDFA9003AAF8E /* Socket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				DB1D01A4212CD56A006B190E /* Intents.framework */,
-				DB1581EC2128EC3300589EC5 /* Socket.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,7 +368,6 @@
 				DB29CBBD210CD2C000951F45 /* Sources */,
 				DB29CBBE210CD2C000951F45 /* Frameworks */,
 				DB29CBBF210CD2C000951F45 /* Resources */,
-				DB1581EE2128EC4A00589EC5 /* ShellScript */,
 				DB1D0192212CCAEE006B190E /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -379,6 +376,9 @@
 				DB1D018D212CCAEE006B190E /* PBXTargetDependency */,
 			);
 			name = ToxCoreHome;
+			packageProductDependencies = (
+				44BA21D225DFDFA9003AAF8E /* Socket */,
+			);
 			productName = ToxCoreHome;
 			productReference = DB29CBC1210CD2C000951F45 /* ToxCoreHome.app */;
 			productType = "com.apple.product-type.application";
@@ -408,11 +408,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Dani Tox";
 				TargetAttributes = {
 					DB1D0186212CCAEE006B190E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1240;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -421,7 +422,7 @@
 					};
 					DB29CBC0210CD2C000951F45 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1240;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -433,6 +434,7 @@
 					};
 					DBE12F4F2138946400E054FF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1240;
 						TestTargetID = DB29CBC0210CD2C000951F45;
 					};
 				};
@@ -446,6 +448,9 @@
 				Base,
 			);
 			mainGroup = DB29CBB8210CD2C000951F45;
+			packageReferences = (
+				44BA21D125DFDFA9003AAF8E /* XCRemoteSwiftPackageReference "BlueSocket" */,
+			);
 			productRefGroup = DB29CBC2210CD2C000951F45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,24 +487,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DB1581EE2128EC4A00589EC5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Socket.framework",
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Socket.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB1D0183212CCAEE006B190E /* Sources */ = {
@@ -608,7 +595,7 @@
 				CODE_SIGN_ENTITLEMENTS = ToxObjectsVoiceControl/ToxObjectsVoiceControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				DEVELOPMENT_TEAM = R779A64KR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -622,10 +609,10 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2.ToxObjectsVoiceControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.corehome.ToxObjectsVoiceControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -636,7 +623,7 @@
 				CODE_SIGN_ENTITLEMENTS = ToxObjectsVoiceControl/ToxObjectsVoiceControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				DEVELOPMENT_TEAM = R779A64KR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -649,10 +636,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2.ToxObjectsVoiceControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.corehome.ToxObjectsVoiceControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -683,6 +670,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -708,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -743,6 +731,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -762,7 +751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -779,7 +768,7 @@
 				CODE_SIGN_ENTITLEMENTS = ToxCoreHome/ToxCoreHome.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				DEVELOPMENT_TEAM = R779A64KR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -790,10 +779,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.corehome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -806,7 +795,7 @@
 				CODE_SIGN_ENTITLEMENTS = ToxCoreHome/ToxCoreHome.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5WYV8U42F;
+				DEVELOPMENT_TEAM = R779A64KR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -817,10 +806,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHome2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.corehome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -842,7 +831,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToxCoreHome.app/ToxCoreHome";
 			};
@@ -864,7 +853,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ToxCoreHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToxCoreHome.app/ToxCoreHome";
 			};
@@ -910,6 +899,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44BA21D125DFDFA9003AAF8E /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.200;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44BA21D225DFDFA9003AAF8E /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44BA21D125DFDFA9003AAF8E /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DB29CBCB210CD2C000951F45 /* ToxCoreHome.xcdatamodeld */ = {
