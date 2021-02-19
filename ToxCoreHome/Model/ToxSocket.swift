@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Socket
+import Socket
 
 struct ToxAddress {
     var host: String
@@ -17,7 +17,7 @@ struct ToxAddress {
 
 class ToxSocket<RequestType: Codable, ReturnType: Codable> {
     
-//    private var socket : Socket?
+    private var socket : Socket?
     private var address : ToxAddress?
     
     init(address : ToxAddress? = nil) throws {
@@ -27,29 +27,28 @@ class ToxSocket<RequestType: Codable, ReturnType: Codable> {
 
         
         self.address = (address == nil) ? ToxAddress(host: host, port: port) : address
-//        do {
-//            try self.socket = Socket.create()
-//            //self.socket?.readBufferSize = 32768
-//        } catch {
-//            throw error
-//        }
+        do {
+            try self.socket = Socket.create()
+            //self.socket?.readBufferSize = 32768
+        } catch {
+            throw error
+        }
     }
     
     private func connect(_ completion : (Error?) -> Void) {
-//        if let host = address?.host, let port = address?.port {
-//            do {
-//                try socket?.connect(to: host, port: port)
-//                completion(nil)
-//            } catch {
-//                completion(error)
-//            }
-//
-//        }
+        if let host = address?.host, let port = address?.port {
+            do {
+                try socket?.connect(to: host, port: port)
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+
+        }
     }
     
     private func read(in data: inout Data) -> Int {
-        return 0
-//        return try! self.socket?.read(into: &data) ?? 0
+        return try! self.socket?.read(into: &data) ?? 0
     }
     
     public func send(request: ToxRequest<RequestType>, completionHandler: (ReturnType?, Error?) -> Void) {
@@ -59,13 +58,13 @@ class ToxSocket<RequestType: Codable, ReturnType: Codable> {
                 return
             }
             
-            guard request.data != nil else {
+            guard let requestData = request.data else {
                 completionHandler(nil, ToxError.inconsistencyLocalError(msg: "requestData == nil"))
                 return
             }
             
             do {
-//                try self.socket?.write(from: requestData)
+                try self.socket?.write(from: requestData)
                 
                 var dataRead = Data()
                 var bytes = 0
