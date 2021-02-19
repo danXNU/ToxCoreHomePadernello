@@ -177,7 +177,12 @@ class ToxAnyObjectCell<T : ToxObject> : UITableViewCell {
     
     let boxView : UIView = {
         let boxView = UIView()
-        boxView.backgroundColor = UIColor.black.lighter(by: 10)
+        if #available(iOS 13, *) {
+            boxView.backgroundColor = .secondarySystemBackground
+        } else {
+            boxView.backgroundColor = UIColor.black.lighter(by: 10)
+        }
+        
         boxView.layer.cornerRadius = 10
         boxView.translatesAutoresizingMaskIntoConstraints = false
         return boxView
@@ -196,7 +201,12 @@ class ToxAnyObjectCell<T : ToxObject> : UITableViewCell {
         let l = UILabel()
         l.numberOfLines = 0
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = .white
+        if #available(iOS 13, *) {
+            l.textColor = .label
+        } else {
+            l.textColor = .white
+        }
+        
         return l
     }()
     
@@ -216,7 +226,12 @@ class ToxAnyObjectCell<T : ToxObject> : UITableViewCell {
     
     let secondLabel : UILabel = {
         let l = UILabel()
-        l.textColor = .white
+        if #available(iOS 13, *) {
+            l.textColor = .label
+        } else {
+            l.textColor = .white
+        }
+        
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
@@ -224,7 +239,11 @@ class ToxAnyObjectCell<T : ToxObject> : UITableViewCell {
     
     let thirdLabel : UILabel = {
         let l = UILabel()
-        l.textColor = .white
+        if #available(iOS 13, *) {
+            l.textColor = .label
+        } else {
+            l.textColor = .white
+        }
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()

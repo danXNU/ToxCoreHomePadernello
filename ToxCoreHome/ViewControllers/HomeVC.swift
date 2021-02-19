@@ -28,10 +28,20 @@ class HomeVC: UIViewController, HasCustomView {
         let barItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTouched))
         self.navigationItem.setRightBarButton(barItem, animated: true)
         
-        let ipBarButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(editIPButtonTouched))
-        self.navigationItem.setLeftBarButton(ipBarButton, animated: true)
+        if #available(iOS 13, *) {
+            let ipBarButton = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"), style: .done, target: self, action: #selector(editIPButtonTouched))
+            self.navigationItem.setLeftBarButton(ipBarButton, animated: true)
+        } else {
+            let ipBarButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(editIPButtonTouched))
+            self.navigationItem.setLeftBarButton(ipBarButton, animated: true)
+        }
         
-        rootView.backgroundColor = UIColor.white.darker(by: 7)
+        if #available(iOS 13, *) {
+            rootView.backgroundColor = .systemBackground
+        } else {
+            rootView.backgroundColor = UIColor.white.darker(by: 7)
+        }
+        
         rootView.tableView.delegate = self
         rootView.tableView.dataSource = self
         rootView.tableView.register(ToxAnyObjectCell.self, forCellReuseIdentifier: "cell")

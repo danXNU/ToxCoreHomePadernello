@@ -28,7 +28,13 @@ class SiriVC: UIViewController, HasCustomView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Siri"
-        rootView.backgroundColor = UIColor.white.darker(by: 7)
+        
+        if #available(iOS 13, *) {
+            rootView.backgroundColor = .systemBackground
+        } else {
+            rootView.backgroundColor = UIColor.white.darker(by: 7)
+        }        
+        
         rootView.tableView.register(SiriShortcutCell.self, forCellReuseIdentifier: "cell")
         rootView.tableView.delegate = self
         rootView.tableView.dataSource = self

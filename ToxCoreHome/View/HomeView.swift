@@ -32,6 +32,10 @@ class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        if #available(iOS 13, *) {
+            self.backgroundColor = .systemBackground
+        }
+        
         self.addSubview(objectChoiceSegment)
         self.addSubview(tableView)
         

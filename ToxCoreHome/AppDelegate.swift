@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.title = "Home"
         let nav = UINavigationController(rootViewController: vc)
         
+        
         let vc2 = SiriVC()
         vc2.title = "Siri"
         let nav2 = UINavigationController(rootViewController: vc2)
@@ -33,6 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc3 = LiveVC()
         vc3.title = "Live"
         let nav3 = UINavigationController(rootViewController: vc3)
+        
+        if #available(iOS 13, *) {
+            nav.tabBarItem.image = UIImage(systemName: "house")
+            nav2.tabBarItem.image = UIImage(systemName: "mic")
+            nav3.tabBarItem.image = UIImage(systemName: "exclamationmark.bubble")
+        }
+        
         
         let tabController = UITabBarController()
         tabController.addChild(nav)
